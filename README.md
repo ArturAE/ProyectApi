@@ -19,15 +19,11 @@ _Software necesario para ejecutar el proyecto_
 
 _Conoce el Modelo y la Arquitectura de la API_
 
-```
-    - PON LA IMAGEN DE LA ARQUITECTURA Y MODELO DE LA API
-```
+![Image text](https://cdn.discordapp.com/attachments/997299256291491874/1028597372860772403/modelooo.jpg)
 
 _Modelo Relacional de la Base de Datos_
 
-```
-    - PON LA IMAGEN DEL MODELO RELACIONAL
-```
+![Image text](https://cdn.discordapp.com/attachments/997299256291491874/1028597372625891408/entidad.jpg)
 
 ### Instalación 🔧
 
