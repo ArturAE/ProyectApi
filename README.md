@@ -4,9 +4,7 @@ _Es una API que sirve como evaluacion para el modulo de Back-end Fundamentals_
 
 ## Comenzando 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
-
-Mira **Deployment** para conocer como desplegar el proyecto.
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local o deployada._
 
 ### Pre-requisitos 📋
 
@@ -52,8 +50,6 @@ _Ejecutar de forma local_
 ```
 
 ## Ejecutando las pruebas ⚙️
-
-_Explica como ejecutar las pruebas automatizadas para este sistema_
 
 _IMPORTANTE - Antes de continuar presta atención_
 
