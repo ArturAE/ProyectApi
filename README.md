@@ -59,6 +59,25 @@ _IMPORTANTE - Antes de continuar presta atención_
     -SI HAY MAS COSAS QUE NO SE DEBEN DE HACER, ESCRIBELAS
 ```
 
+## Iniciar sesión (Sign up)
+
+Para regristarse es necesario enviar una petición HTTP al servidor con el metodo POST a la siguiente dirección url para el endpoint Sign up
+```
+https://proyectoapi-f2.herokuapp.com/docs
+```
+
+con los siguientes atributos y valores.
+
+```json
+{
+   "username": "alejandro",
+   "name": "alejandro",
+   "lastname": "sanchez",
+   "email": "alejandro10m_568@hotmail.com",
+   "password": "12345"
+}
+```
+
 _LEE LO DE ARRIBA Y LUEGO AHORA SI ESTO, MUESTRA LOS EJEMPLOS DE COMO REGISTRARTE, LOGGEARTE Y HACER EL CRUD - ES IMPORTANTE QUE MUESTRES AL MENOS UN EJEMLO DE COMO SE DEBE LLENAR LO DE CREAR UN EMPLEADO, UN DEPARTAMENT Y UNA EMPRESA, ASI COMO LA ACTUALIZACION DE CADA UNO DE ELLOS Y SOBRE COMO VA SU RUTA, SI LLEVA O NO ID Y POR CUAL METODO HTTP VA, ASI COMO QUE TIPO DE AUTORIZACION NECESITA PARA HACER ESA ACCION, SI QUIERES ESAS COSAS LAS PUEDES PONER EN IMAGENES, PERO EL EJEMPLO DE COMO CREAR UN EMPLEADO, UN DEPARTAMENT Y UNA EMPRESA, ASI COMO LA ACTUALIZACION DE CADA UNO DE ELLOS, PON EL JSON TAL CUAL, CASI COMO PARA QUE COPIEN Y PEGUEN_
 
 ```
