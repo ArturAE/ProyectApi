@@ -128,6 +128,6 @@ _Herramientas Utilizadas_
 
 Puedes ver el video del desarrollo de la API aqui [Video](hhttps://youtu.be/eKRC1o640F0).
 
-## Expresiones de Gratitud 🎁
+## Agradecimientos 🎁
 
 - Muchas gracias Bedu y Becas Santander por la oportunidad y conocimientos impartidos para poder lograr el desarrollo de esta API y desarrollar nuestras habilidades para poder aplicarlas en ambitos sobre Tecnologia y Desarrollo
