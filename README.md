@@ -126,7 +126,7 @@ _Herramientas Utilizadas_
 - **Angel David Huchim** - _Documentación y Deploy de la API_ - [davidhoil](https://github.com/davidhoil)
 - **Luis Arturo Arredondo Espínola** - _Creación de los modelos, estructura del proyecto, rutas y el video_ - [ArturAE](https://github.com/ArturAE)
 
-Puedes ver el video del desarrollo de la API aqui [Video](hhttps://youtu.be/eKRC1o640F0).
+Puedes ver el video del desarrollo de la API aqui [Video](https://youtu.be/eKRC1o640F0).
 
 ## Agradecimientos 🎁
 
