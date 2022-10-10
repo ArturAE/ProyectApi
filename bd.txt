@@ -1,0 +1,31 @@
+
+
+
+
+
+
+
+
+usuarios
+
+un empleado pertenece a un departamento
+
+un departamento tiene muchos empleados
+
+una empresa tiene muchos departamento
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
