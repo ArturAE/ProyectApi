@@ -59,14 +59,14 @@ _IMPORTANTE - Antes de continuar presta atención_
     -SI HAY MAS COSAS QUE NO SE DEBEN DE HACER, ESCRIBELAS
 ```
 
-## Iniciar sesión (Sign up)
+## Registrarse (Sign up)
 
 Para regristarse es necesario enviar una petición HTTP al servidor con el metodo POST a la siguiente dirección url para el endpoint Sign up
 ```
-https://proyectoapi-f2.herokuapp.com/docs
+https://proyectoapi-f2.herokuapp.com/user/signUp
 ```
 
-con los siguientes atributos y valores.
+Enviaremos la información en formato JSON con los siguientes atributos y valores de ejemplo.
 
 ```json
 {
@@ -78,35 +78,143 @@ con los siguientes atributos y valores.
 }
 ```
 
-_LEE LO DE ARRIBA Y LUEGO AHORA SI ESTO, MUESTRA LOS EJEMPLOS DE COMO REGISTRARTE, LOGGEARTE Y HACER EL CRUD - ES IMPORTANTE QUE MUESTRES AL MENOS UN EJEMLO DE COMO SE DEBE LLENAR LO DE CREAR UN EMPLEADO, UN DEPARTAMENT Y UNA EMPRESA, ASI COMO LA ACTUALIZACION DE CADA UNO DE ELLOS Y SOBRE COMO VA SU RUTA, SI LLEVA O NO ID Y POR CUAL METODO HTTP VA, ASI COMO QUE TIPO DE AUTORIZACION NECESITA PARA HACER ESA ACCION, SI QUIERES ESAS COSAS LAS PUEDES PONER EN IMAGENES, PERO EL EJEMPLO DE COMO CREAR UN EMPLEADO, UN DEPARTAMENT Y UNA EMPRESA, ASI COMO LA ACTUALIZACION DE CADA UNO DE ELLOS, PON EL JSON TAL CUAL, CASI COMO PARA QUE COPIEN Y PEGUEN_
+![Image text](https://github.com/ArturAE/ProyectApi/blob/main/images/singup.PNG)
 
-```
-    - AQUI ESCRIBIRIAS LO ANTERIOR Y PONDRIAS LAS IMAGENES DE ACUERDO AL ORDEN
-```
+Una vez enviada la petición al servidor se nos creara el usuario con toda la información introducida.
 
-_SON VARIOS PASOS, SOLO COPIA Y PEGA ESTO, CAMBIA EL TITULO Y SU CONTENIDO_
+## Iniciar sesión (Login)
 
+Para acceder a la aplicación es necesario que exista el usuario con sus credenciales de acceso, para poder enviar una petición HTTP al servidor con el metodo POST a la siguiente dirección url para el endpoint Log in
 ```
-    - METER LA INFO
-```
-
-_SIG PASO_
-
-```
-    - METER LA INFO
+https://proyectoapi-f2.herokuapp.com/user/logIn
 ```
 
-_SIG PASO_
+Enviaremos la información en formato JSON con los siguientes atributos y valores de ejemplo.
 
-```
-    - METER LA INFO
+```json
+{
+    "username": "alejandro",
+    "password": "12345"
+}
 ```
 
-_ASI SUCESIVAMENTE_
+Una vez enviada la petición al servidor se nos creara el usuario con toda la información introducida se nos regresara su JSON Web Token con el que podremos hacer acciones sobre la base de datos.
 
+![Image text](https://media.discordapp.net/attachments/997299256291491874/1028854413294567484/unknown.png?width=1270&height=587)
+
+
+## Crear un empleado (Add employee)
+
+Para crear un nuevo empleado es necesario enviar una petición HTTP al servidor con el metodo POST a la siguiente dirección url para el endpoint Add Employee
 ```
-    - ASI SUCESIVAMENTE
+https://proyectoapi-f2.herokuapp.com/employee
 ```
+
+Enviaremos la información en formato JSON con los siguientes atributos y valores de ejemplo.
+
+```json
+{
+	"first_name": "juan",
+	"last_name": "lopez",
+	"phone": "8887776556",
+	"address": "av. juarez #456",
+	"email": "juana@gmail.com",
+	"department": "marketing"
+}
+```
+
+Una vez enviada la petición al servidor se nos creara el empleado con toda la información introducida, recordemos que es necesario iniciar sesión para poder crear el empleado, si no nos hemos autentificado anteriormente no podremos realizar está acción, es por esto que debemos de anexar a la petición el JSON Web Token del usuario que se autentifico para realizar está accón.
+
+![Image text](https://media.discordapp.net/attachments/997299256291491874/1028855782088912987/unknown.png)
+
+Procedemos a enviar la petición.
+
+![Image text](https://media.discordapp.net/attachments/997299256291491874/1028855397890674769/unknown.png?width=986&height=586)
+
+
+## Obtener un empleado (Get employee)
+
+Para obtener a un empleado anteriormente registrado es necesario enviar una petición HTTP al servidor con el metodo GET a la siguiente dirección url para el endpoint Get Employee, es necesario especificar el ID del empleado el cual queremos obtener, igualmente si no nos hemos autentificado anteriormente no podremos realizar está acción, es por esto que debemos de anexar a la petición el JSON Web Token del usuario que se autentifico para realizar está accón.
+```
+https://proyectoapi-f2.herokuapp.com/employee/1
+```
+
+![Image text](https://media.discordapp.net/attachments/997299256291491874/1028856489076588584/unknown.png)
+
+Una vez enviada la petición al servidor se nos retornara al empleado solicitado si este existe en la base de datos.
+
+![Image text](https://media.discordapp.net/attachments/997299256291491874/1028856914592923708/unknown.png?width=1070&height=586)
+
+
+## Acutalizar un empleado (Update employee)
+
+Para actualizar a un empleado es necesario enviar una petición HTTP al servidor con el metodo PATCH a la siguiente dirección url para el endpoint Update Employee
+```
+https://proyectoapi-f2.herokuapp.com/employee/1
+```
+
+Enviaremos la información en formato JSON con los siguientes atributos y valores de ejemplo.
+
+```json
+{
+	"first_name": "alejandro",
+	"phone": 3337776555,
+	"email": "alejandro@gmail.com",
+	"department": "programador"
+}
+```
+![Image text](https://media.discordapp.net/attachments/997299256291491874/1028858186075209738/unknown.png)
+
+
+Una vez enviada la petición al servidor se nos actualizara el empleado con toda la información introducida, recordemos que es necesario iniciar sesión para poder crear el empleado, si no nos hemos autentificado anteriormente no podremos realizar está acción, es por esto que debemos de anexar a la petición el JSON Web Token del usuario que se autentifico para realizar está accón.
+
+![Image text](https://media.discordapp.net/attachments/997299256291491874/1028858287669653505/unknown.png)
+
+Procedemos a enviar la petición.
+
+![Image text](https://media.discordapp.net/attachments/997299256291491874/1028858392820858961/unknown.png?width=1025&height=587)
+
+
+
+## Obtener todos los empleados (Get employees)
+
+Para obtener a todos los empleados registrados en la base de datos  es necesario enviar una petición HTTP al servidor con el metodo GET a la siguiente dirección url para el endpoint Get Employees, en esté caso no que iniciemos sesión, por lo tanto no debemos de anexar a la petición el JSON Web Token.
+```
+https://proyectoapi-f2.herokuapp.com/employee
+```
+
+Una vez enviada la petición al servidor se nos retornara a todos los empleados registrados en la base de datos.
+
+![Image text](https://media.discordapp.net/attachments/997299256291491874/1028858531824283648/unknown.png?width=923&height=586)
+
+
+
+
+## Eliminar a un empleado (Delete employee)
+
+Para esté caso no solo es necesario iniciar sesión para poder eliminar el empleado, si no que tambien debemos de iniciar sesión con el usuario administrador, por lo tengo iniciamos sesión con un usuario administrador, por lo que enviamos los siguientes datos para las credenciales de un usuario administrador.
+```json
+{
+    "username": "alejandro",
+    "password": "12345"
+}
+```
+
+Para eleminar a un empleado es necesario enviar una petición HTTP al servidor con el metodo DELETE a la siguiente dirección url para el endpoint Delete Employees
+nos hemos autentificado anteriormente no podremos realizar está acción, es por esto que debemos de anexar a la petición el JSON Web Token del usuario que se autentifico para realizar está accón.
+```
+https://proyectoapi-f2.herokuapp.com/employee/2
+```
+
+Una vez enviada la petición al servidor se nos retornara unos corchetes, estó nos especifica que se ha eliminado correctamente el usuario.
+
+![Image text](https://media.discordapp.net/attachments/997299256291491874/1028859656396881920/unknown.png?width=1309&height=586)
+
+Si volvemos a obtener los empleadoos, nos damos cuenta que ya no existe el empleado que hemos eliminado, es decir el empleado con ID = 2.
+
+![Image text](https://media.discordapp.net/attachments/997299256291491874/1028859827981647902/unknown.png?width=933&height=586)
+
+
 
 ## Despliegue 📦
 
